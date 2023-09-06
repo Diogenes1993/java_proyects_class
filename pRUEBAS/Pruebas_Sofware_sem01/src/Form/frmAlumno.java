@@ -51,8 +51,8 @@ public final class frmAlumno extends javax.swing.JInternalFrame {
         lbl_image();
         inhabilitar();
         Image imagen=getToolkit().getImage("src/imagenes/person_110935.png");
-        imagen=imagen.getScaledInstance(110, 110,Image.SCALE_DEFAULT);
-       this.setIcon(new ImageIcon(imagen));
+        
+       
         reinicio();
        
     }
