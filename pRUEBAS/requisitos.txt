@@ -1,9 +1,10 @@
+
 1.-Maximizar la pantalla principal-----OK
 2.-poner barra de opciones cuando solo cuenta con uno --OK
 3.- poner en la barra de opciones iconos----OK
 4.-poner en From el logotipo empresa
 5.-cambiar logo de Java--OK
-6.-En la parte baja poner el nombre del Sistema Asi como tambien la Hora 
+6.-En la parte baja poner el nombre del Sistema Asi como tambien la Hora--OK
 7.-el txt edad poner solo numero-OK
 8.-matricula autoincrementable--OK
 9.- en los txt que se ingrese letras poner solo letras--OK
@@ -15,11 +16,11 @@
 --3.- Corregir el nombre del boton"Historial" a "Alumno" y agregar un menubar --OK
 ---4.- poner el logotipo de la empresa de Fondo----- la hora que ocupe menos espadio
 ---5.-al dar enter deve pasar de txt a txt--OK
----6.-cambiar el orden de las los ingresos de input(ap,am,nom,edad,sexo)
----7.-Poner un limite a los txt y este acorde a los campos de la base de datos
----8.-Agregar un buscador----no poner Enabled cuando se seleccione 
+---6.-cambiar el orden de las los ingresos de input(ap,am,nom,edad,sexo)--OK
+---7.-Poner un limite a los txt y este acorde a los campos de la base de datos--OK
+---8.-Agregar un buscador----no poner Enabled cuando se seleccione --OK
 ---9.-poner opciones al eliminar y actualizar
---10.-Poner la foto de la persona mediante el un buscador de la persona que se solicita
+--10.-Poner la foto de la persona mediante el un buscador de la persona que se solicita--OK
 
 1.-Aplicar todas las validaciones en el Login
 2.- password JPassword
