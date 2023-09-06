@@ -1,0 +1,107 @@
+CREATE DATABASE INSTITUCION;
+USE INSTITUCION;
+
+CREATE TABLE ALUMNO
+(
+MATRICULA 		 VARCHAR(20) NOT NULL,
+NOMBRE 			 VARCHAR(50) NOT NULL,
+APELLIDO_PATERNO VARCHAR(50) NOT NULL,
+APELLIDO_MATERNO VARCHAR(50) NOT NULL,
+EDAD 			 VARCHAR(99) NOT NULL,
+SEXO 			 VARCHAR(23) NOT NULL
+);
+
+
+SELECT * FROM ALUMNO ;
+DELIMITER //
+CREATE PROCEDURE PS_insertar_alumno(
+		IN matricula_alumno 		VARCHAR(20),
+		IN nombre_alumno 	 		VARCHAR(50),
+		IN apellido_paterno_alumno	VARCHAR(50),
+	    IN apellido_materno_alumno 	VARCHAR(50),
+        IN edad_alumno				VARCHAR(99),
+        IN sexo_alumno				VARCHAR(23)
+       )
+BEGIN
+	INSERT INTO ALUMNO  
+	               (
+	               MATRICULA,
+	               NOMBRE,
+	               APELLIDO_PATERNO,
+	               APELLIDO_MATERNO,
+	               EDAD,
+	               SEXO
+	               )
+		 VALUES 	
+		           (
+		           matricula_alumno,
+		           nombre_alumno,
+		           apellido_paterno_alumno,
+		           apellido_materno_alumno,
+		           edad_alumno,
+		           sexo_alumno);
+END;
+//
+DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE PS_actualizar_alumno
+				 (
+					IN matricula_alumno 		VARCHAR(20),
+					IN nombre_alumno 	 		VARCHAR(50),
+					IN apellido_paterno_alumno	VARCHAR(50),
+					IN apellido_materno_alumno 	VARCHAR(50),
+					IN edad_alumno				VARCHAR(99),
+					IN sexo_alumno				VARCHAR(23)
+                 )
+BEGIN
+	 UPDATE ALUMNO	
+     SET   NOMBRE    		  = nombre_alumno,
+           APELLIDO_PATERNO   = apellido_paterno_alumno,
+           APELLIDO_MATERNO   = apellido_materno_alumno,
+           EDAD			      = edad_alumno,
+           SEXO			      = sexo_alumno
+     WHERE MATRICULA 		  = matricula_alumno;
+END;
+//
+
+DELIMITER //
+CREATE PROCEDURE PS_eliminar_alumno
+				 (
+					IN matricula_alumno VARCHAR(20)
+                 )
+BEGIN	
+	 DELETE FROM 	ALUMNO	
+			WHERE   MATRICULA = matricula_alumno;
+END;
+//
+
+DELIMITER //
+CREATE FUNCTION FN_generar_codigo() RETURNS VARCHAR(20)
+DETERMINISTIC
+READS SQL DATA
+BEGIN
+	DECLARE valor_nuevo VARCHAR(20);
+    DECLARE valor_maximo VARCHAR(20);
+    
+    SELECT MAX(MATRICULA) INTO valor_maximo FROM ALUMNO;
+    
+    IF valor_maximo IS NULL THEN
+		SET valor_nuevo = '00000000000000000001';
+	ELSE
+		SET valor_nuevo = LPAD(CAST(SUBSTRING(valor_maximo,1,20) AS FLOAT)+1,20,'0');
+	END IF;
+	RETURN valor_nuevo;
+END;
+//                 
+
+
+DROP PROCEDURE    PS_generar_codigo;                
+
+
+CALL PS_insertar_alumno((SELECT FN_generar_codigo()),' ',' ',' ',' ',' ');
+
+         
+         
+
+

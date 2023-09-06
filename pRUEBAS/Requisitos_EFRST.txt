@@ -1,0 +1,24 @@
+1.- Corregir la problematica en cuanto a las ventas
+
+2.-
+--NECESIDAD
+ No se lleva un control de la venta que se hace a los alumnos, la necesidad es contar con 
+un mejor control para el buen manejo del negocio
+
+
+OBJETIVO GENERAL:
+Tener en el sistema el estado de cuenta de cada uno de los clientes.
+
+OBJETIVO ESPECIFICO:
+Definir todas las mejoras segun el obgetivo General
+ejm:
+Tener un registro 
+
+
+DESCRIPCION:
+MISION:
+VISION:
+
+3.-
+4.-
+5.-
