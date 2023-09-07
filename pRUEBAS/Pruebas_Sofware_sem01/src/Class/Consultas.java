@@ -102,7 +102,7 @@ public class Consultas {
         
         catch(SQLException ex)
         {
-            System.out.println(" ERROR cod "+ex.getMessage());
+            System.out.println(" ERROR  "+ex.getMessage());
         }
         
         return cod_nuevo;
@@ -113,7 +113,7 @@ public class Consultas {
          try{
             xcon = Conexion.Conectar();
             String[] Titulos={"MATRICULA","NOMBRE","APELLIDO PATERNO","APELLIDO MATERNO","EDAD","SEXO"};
-             System.out.println("NORMAL");
+             
             String sql = "SELECT MATRICULA,NOMBRE,APELLIDO_PATERNO,APELLIDO_MATERNO,EDAD,SEXO FROM ALUMNO ";
                    
             
@@ -165,9 +165,6 @@ public class Consultas {
                   preparacion_de_consulta.setBinaryStream(7,contenedor_image,(int)objeto_archivo_image.length());
                            
                            resultado_consulta=preparacion_de_consulta.executeUpdate();
-                           if(resultado_consulta>0){
-                                System.out.println("SE INSERTO CON EXITO");
-                           }
               
               } catch (FileNotFoundException ex) {
                    System.out.println("ERROR "+ex);     
@@ -214,9 +211,6 @@ public class Consultas {
                       }
                }
                               resultado_consulta=preparacion_de_consulta.executeUpdate();
-                           if(resultado_consulta>0){
-                                System.out.println("SE ACTUALIZO CON EXITO");
-                           }  
                         }catch(SQLException ex)
                         {
                             System.out.println("ERROR "+ex);
@@ -267,14 +261,14 @@ public class Consultas {
              ResultSet rs =  preparando_la_consulta .executeQuery();
              
             String[] fila=new String[7];
-            while (rs.next()){
+            while (rs.next())
+            {
                 fila[0]=rs.getString("MATRICULA");
                 fila[1]=rs.getString("NOMBRE");
                 fila[2]=rs.getString("APELLIDO_PATERNO");
                 fila[3]=rs.getString("APELLIDO_MATERNO");
                 fila[4]=rs.getString("EDAD");
                 fila[5]=rs.getString("SEXO");
-                
                 datos_busqueda[5]=rs.getBlob("FOTO");
 ;                modelo.addRow(fila);
             }
@@ -283,15 +277,10 @@ public class Consultas {
             {
                 datos_busqueda[i]=fila[i+1];
             }
-            
-            
-            
             table.setModel(modelo);
-            
 
         }catch(SQLException ex){
              System.out.println("ERROR "+ex.getMessage());
-            
         } 
          return datos_busqueda;
     }
@@ -315,7 +304,6 @@ public class Consultas {
              
             }
         } catch (SQLException e) {
-            e.printStackTrace();
             return -1;
         }
     }

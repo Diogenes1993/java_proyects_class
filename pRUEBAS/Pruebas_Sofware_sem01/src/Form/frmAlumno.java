@@ -12,6 +12,7 @@ package Form;
     import java.sql.Blob;
     import java.sql.Connection;
     import java.sql.SQLException;
+import java.util.Arrays;
     import java.util.logging.Level;
     import java.util.logging.Logger;
     import javax.swing. ImageIcon;
@@ -398,23 +399,51 @@ reinicio();
     }//GEN-LAST:event_btn_seleccionar_ruta_imagen_alumnoActionPerformed
 
     private void btn_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nuevoActionPerformed
-        habilitar();
         lbl_image();
         consultas.VerAlumno_enTabla(tbl_alumno);
-        accion="insertar";reinicio();
+        accion="insertar";
+        habilitar();
+        reinicio();
     }//GEN-LAST:event_btn_nuevoActionPerformed
 
     private void btn_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardarActionPerformed
         if("insertar".equals(accion))
         {
-            
-            llenar_set_consultas();
-            consultas.insertarAlumno(tbl_alumno);
-            inhabilitar();
+            if(txt_ruta_imagen_alumno.getText().equals(""))
+            {
+                int respuesta = JOptionPane.showConfirmDialog(null, "ESTA INGRESANDO UN ALUMNO SIN FOTOGRAFIA \n¿ESTA SEGURO?", "Confirmación", JOptionPane.YES_NO_OPTION);
+                if(respuesta==JOptionPane.YES_OPTION)
+                {
+                    String ruta="C:\\Users\\alexz\\Downloads\\git_proyects\\java_proyects_class\\pRUEBAS\\Pruebas_Sofware_sem01\\src\\imagenes\\sin_foto.jpg";
+                    txt_ruta_imagen_alumno.setText(ruta);
+                    llenar_set_consultas();
+            int resultado=consultas.insertarAlumno(tbl_alumno);
+            if(resultado==1)
+            {
+                JOptionPane.showMessageDialog(null,"SE INSERTO EXITOSAMENTE");
+            }
             reinicio();
             consultas.VerAlumno_enTabla(tbl_alumno);
-       
+              inhabilitar();    
+                }
+                if(respuesta==JOptionPane.NO_OPTION)
+                {
+                    btn_seleccionar_ruta_imagen_alumno.requestFocus();
+                }
+            }
+            else{
+            llenar_set_consultas();
+            int resultado=consultas.insertarAlumno(tbl_alumno);
+            if(resultado==1)
+            {
+                JOptionPane.showMessageDialog(null,"SE INSERTO EXITOSAMENTE");
+            }
+            reinicio();
+            consultas.VerAlumno_enTabla(tbl_alumno);
+              inhabilitar();
         }
+        }
+        
         //-----------------------------------------------------------------------------------------------
         if(("modifica").equals(accion))
                 {
@@ -426,7 +455,11 @@ reinicio();
                  int respuesta = JOptionPane.showConfirmDialog(null, "¿Modificara  "+txt_matricula_alumno.getText()+"? ¿Desea Continuar?", "Confirmación", JOptionPane.YES_NO_OPTION);
                 if(respuesta==JOptionPane.YES_OPTION){
                         llenar_set_consultas();
-                        consultas.modificaAlumno();
+                       int resultado=consultas.modificaAlumno();
+                       if(resultado==1)
+                       {
+                           JOptionPane.showMessageDialog(null,"SE ACTUALIZO EXITOSAMENTE");
+                       }
                         inhabilitar();
                         reinicio();
                         consultas.VerAlumno_enTabla(tbl_alumno);
@@ -446,7 +479,7 @@ reinicio();
         consultas.setApellido_materno(txt_apellido_materno_alumno.getText());
         consultas.setEdad(txt_edad_alumno.getText());
         consultas.setSexo(cb_sexo_alumno.getSelectedItem().toString());
-        consultas.setFoto(txt_ruta_imagen_alumno.getText());
+          consultas.setFoto(txt_ruta_imagen_alumno.getText());
     }
     
     private void btn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarActionPerformed
@@ -576,16 +609,14 @@ if (cantidad_de_caracteres.length() >= 50 && c != '\b') {
         consultas.setMatricula(txt_matricula_alumno.getText());
          
          Object datos[]=consultas.BuscarAlumno_enTabla(tbl_alumno);
-         
+       
          txt_nombre_alumno.setText(datos[0].toString());
          txt_apellido_paterno_alumno.setText(datos[1].toString());
          txt_apellido_materno_alumno.setText(datos[2].toString());
          txt_edad_alumno.setText(datos[3].toString());
          cb_sexo_alumno.setSelectedItem(datos[4].toString());
-        
           try
           {
-              
                   Image contenedor_image_en_label=null;
                    imagen_consulta=(Blob) datos[5];
                   contenedor_image_en_label=javax.imageio.ImageIO.read(imagen_consulta.getBinaryStream());
@@ -595,17 +626,9 @@ if (cantidad_de_caracteres.length() >= 50 && c != '\b') {
           } catch (IOException | SQLException ex) {
              Logger.getLogger(frmAlumno.class.getName()).log(Level.SEVERE, null, ex);
          }
-         
          }
     }
     
-    
-    
-    
-    
-    
-
- 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button btn_buscador_;
     private java.awt.Button btn_cancelar;
