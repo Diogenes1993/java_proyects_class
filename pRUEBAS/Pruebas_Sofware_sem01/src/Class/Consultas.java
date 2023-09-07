@@ -1,17 +1,12 @@
 
 package Class;
 
-import java.awt.Component;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableColumn;
 
 
 public class Consultas {
@@ -202,25 +197,29 @@ public class Consultas {
               preparacion_de_consulta.setString(4,apellido_materno);
               preparacion_de_consulta.setString(5,edad);
               preparacion_de_consulta.setString(6,sexo);
-                
+               if(foto.equals(""))
+               {
+                  preparacion_de_consulta.setString (7,null);
+               }else{
               File objeto_archivo_image=new File(foto);
   
           try {
                   contenedor_image=new FileInputStream(objeto_archivo_image);
                   preparacion_de_consulta.setBinaryStream(7,contenedor_image,(int)objeto_archivo_image.length());
                            
-                           resultado_consulta=preparacion_de_consulta.executeUpdate();
-                           if(resultado_consulta>0){
-                                System.out.println("SE ACTUALIZO CON EXITO");
-                           }
+                       
               
               } catch (FileNotFoundException ex) {
                    System.out.println("ERROR "+ex);     
                       }
-                            
+               }
+                              resultado_consulta=preparacion_de_consulta.executeUpdate();
+                           if(resultado_consulta>0){
+                                System.out.println("SE ACTUALIZO CON EXITO");
+                           }  
                         }catch(SQLException ex)
                         {
-                            System.out.println("ERROR");
+                            System.out.println("ERROR "+ex);
                         }
       return resultado_consulta;
                             
@@ -237,13 +236,9 @@ public class Consultas {
             String consulta_actualizar = "CALL PS_eliminar_alumno(?)";
              PreparedStatement preparando_la_consulta = xcon.prepareStatement(consulta_actualizar);
             preparando_la_consulta.setString(1,matricula);
-           
-            
-            
             
             respuesta = preparando_la_consulta.executeUpdate();
-            
-            
+
             if(respuesta == 1){
                 System.out.println("ELIMINADO CON EXITO");
                 VerAlumno_enTabla(tabla);
@@ -280,7 +275,6 @@ public class Consultas {
                 fila[4]=rs.getString("EDAD");
                 fila[5]=rs.getString("SEXO");
                 
-               
                 datos_busqueda[5]=rs.getBlob("FOTO");
 ;                modelo.addRow(fila);
             }

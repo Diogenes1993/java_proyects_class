@@ -1,0 +1,232 @@
+warning: in the working copy of 'pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno.form', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pRUEBAS/Pruebas_Sofware_sem01/src/Form/frmAlumno.form', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Class/Conexion.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Class/Conexion.class[m
+[1mindex 17537a0..aebe649 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Class/Conexion.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Class/Conexion.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Class/Consultas.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Class/Consultas.class[m
+[1mindex e3d3b09..d390533 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Class/Consultas.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Class/Consultas.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$1.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$1.class[m
+[1mindex b88495b..3509a14 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$1.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$1.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$10.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$10.class[m
+[1mindex bb597e7..f901ef1 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$10.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$10.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$11.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$11.class[m
+[1mindex a32078e..20e27ab 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$11.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$11.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$12.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$12.class[m
+[1mindex d4e0bad..66e0c26 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$12.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$12.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$2.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$2.class[m
+[1mindex 1b369dd..8201a87 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$2.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$2.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$3.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$3.class[m
+[1mindex 4dd0766..05ef083 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$3.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$3.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$4.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$4.class[m
+[1mindex 4806847..b845a30 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$4.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$4.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$5.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$5.class[m
+[1mindex a1f2615..90cf577 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$5.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$5.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$6.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$6.class[m
+[1mindex adff0d7..1c385d3 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$6.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$6.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$7.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$7.class[m
+[1mindex cefc2d2..1876d9f 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$7.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$7.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$8.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$8.class[m
+[1mindex e3fb46f..3fe8216 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$8.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$8.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$9.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$9.class[m
+[1mindex ede0322..f4dc690 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$9.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial$9.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial.class[m
+[1mindex 56240d8..c389e64 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Alumno_Historial.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$1.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$1.class[m
+[1mindex 874fc74..1b6a247 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$1.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$1.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$2.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$2.class[m
+[1mindex fc1f133..1eeb255 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$2.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$2.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$3.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$3.class[m
+[1mindex 19f56c0..86dd678 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$3.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu$3.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu.class[m
+[1mindex 67a6845..c695602 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/Menu.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$1.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$1.class[m
+[1mindex c4855b0..f7af83c 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$1.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$1.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$10.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$10.class[m
+[1mindex 90c2c51..f6897ef 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$10.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$10.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$11.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$11.class[m
+[1mindex 0204511..71c4282 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$11.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$11.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$12.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$12.class[m
+[1mindex fc9ee3c..ffcb351 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$12.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$12.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$13.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$13.class[m
+[1mindex 89cdef3..801b395 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$13.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$13.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$14.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$14.class[m
+[1mindex 0fa123d..75b4423 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$14.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$14.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$2.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$2.class[m
+[1mindex 83f4163..6a700e1 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$2.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$2.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$3.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$3.class[m
+[1mindex f7e7e1d..c58e2c9 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$3.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$3.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$4.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$4.class[m
+[1mindex 0cdaca2..5f1d332 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$4.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$4.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$5.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$5.class[m
+[1mindex 29418c0..774ec52 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$5.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$5.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$6.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$6.class[m
+[1mindex 85db49a..9d21a82 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$6.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$6.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$7.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$7.class[m
+[1mindex 82aca4d..2ff8ba8 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$7.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$7.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$8.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$8.class[m
+[1mindex 45c6204..3d7628a 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$8.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$8.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$9.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$9.class[m
+[1mindex 47e75d7..8d6a8ce 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$9.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno$9.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno.class[m
+[1mindex ec803c2..f3fdb68 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmAlumno.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$1.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$1.class[m
+[1mindex 3e0c9d7..ae290f8 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$1.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$1.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$2.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$2.class[m
+[1mindex e62db60..0e89f6a 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$2.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$2.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$3.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$3.class[m
+[1mindex f156bc6..6ba8481 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$3.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$3.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$4.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$4.class[m
+[1mindex 445a30e..8387721 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$4.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$4.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$5.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$5.class[m
+[1mindex 3fcfe71..554a897 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$5.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin$5.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin.class b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin.class[m
+[1mindex 8920a03..bf738b5 100644[m
+Binary files a/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin.class and b/pRUEBAS/Pruebas_Sofware_sem01/build/classes/Form/frmlogin.class differ
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/nbproject/private/private.properties b/pRUEBAS/Pruebas_Sofware_sem01/nbproject/private/private.properties[m
+[1mindex 269aaff..6113f9c 100644[m
+[1m--- a/pRUEBAS/Pruebas_Sofware_sem01/nbproject/private/private.properties[m
+[1m+++ b/pRUEBAS/Pruebas_Sofware_sem01/nbproject/private/private.properties[m
+[36m@@ -1,3 +1,3 @@[m
+ compile.on.save=true[m
+[31m-user.properties.file=/home/frank/snap/netbeans/84/build.properties[m
+[32m+[m[32muser.properties.file=C:\\Users\\alexz\\AppData\\Roaming\\NetBeans\\8.2\\build.properties[m
+ [m
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/src/Class/Consultas.java b/pRUEBAS/Pruebas_Sofware_sem01/src/Class/Consultas.java[m
+[1mindex 60a5dbd..d9e55b2 100644[m
+[1m--- a/pRUEBAS/Pruebas_Sofware_sem01/src/Class/Consultas.java[m
+[1m+++ b/pRUEBAS/Pruebas_Sofware_sem01/src/Class/Consultas.java[m
+[36m@@ -1,17 +1,12 @@[m
+ [m
+ package Class;[m
+ [m
+[31m-import java.awt.Component;[m
+ import java.io.File;[m
+ import java.io.FileInputStream;[m
+ import java.io.FileNotFoundException;[m
+ import java.sql.*;[m
+[31m-import java.util.logging.Level;[m
+[31m-import java.util.logging.Logger;[m
+ import javax.swing.JTable;[m
+ import javax.swing.table.DefaultTableModel;[m
+[31m-import javax.swing.table.TableCellRenderer;[m
+[31m-import javax.swing.table.TableColumn;[m
+ [m
+ [m
+ public class Consultas {[m
+[36m@@ -280,7 +275,7 @@[m [mpublic class Consultas {[m
+                 fila[4]=rs.getString("EDAD");[m
+                 fila[5]=rs.getString("SEXO");[m
+                 [m
+[31m-               [m
+[32m+[m[32m                System.out.println("AQUI");[m[41m[m
+                 datos_busqueda[5]=rs.getBlob("FOTO");[m
+ ;                modelo.addRow(fila);[m
+             }[m
+[1mdiff --git a/pRUEBAS/Pruebas_Sofware_sem01/src/Form/frmAlumno.java b/pRUEBAS/Pruebas_Sofware_sem01/src/Form/frmAlumno.java[m
+[1mindex 358b6cd..35eecb2 100644[m
+[1m--- a/pRUEBAS/Pruebas_Sofware_sem01/src/Form/frmAlumno.java[m
+[1m+++ b/pRUEBAS/Pruebas_Sofware_sem01/src/Form/frmAlumno.java[m
+[36m@@ -2,9 +2,8 @@[m
+ package Form;[m
+ [m
+ [m
+[31m-    import Class.Conexion;[m
+[32m+[m[41m    [m
+     import Class.Consultas;[m
+[31m-    import java.io.FileInputStream;[m
+ [m
+     import java.awt. Image;[m
+     import java.awt.event.KeyEvent;[m
+[36m@@ -50,19 +49,16 @@[m [mpublic final class frmAlumno extends javax.swing.JInternalFrame {[m
+         cb_sexo_alumno.addItem("FEMENINO");[m
+         lbl_image();[m
+         inhabilitar();[m
+[31m-        Image imagen=getToolkit().getImage("src/imagenes/person_110935.png");[m
+[31m-        [m
+[31m-       [m
+[32m+[m[32m        Ordenar_Tabla();[m[41m   [m
+         reinicio();[m
+        [m
+     }[m
+     [m
+[31m-    private Connection conexion_base_de_datos_controlboletas;[m
+     [m
+     public void lbl_image()[m
+     {[m
+           Image imagen_default=getToolkit().getImage("src/imagenes/person_110935.png");[m
+[31m-            imagen_default=imagen_default.getScaledInstance(lbl_mostrar_imagen_alumno.getSize().width, lbl_mostrar_imagen_alumno.getSize().height,Image.SCALE_DEFAULT);[m
+[32m+[m[32m            imagen_default=imagen_default.getScaledInstance(110,110,Image.SCALE_DEFAULT);[m
+         lbl_mostrar_imagen_alumno.setIcon(new ImageIcon(imagen_default));[m
+     }[m
+     [m
+[36m@@ -87,23 +83,17 @@[m [mprivate void inhabilitar()[m
+     [m
+        btn_seleccionar_ruta_imagen_alumno.setEnabled(false);[m
+         Ordenar_Tabla();[m
+[31m-        [m
+[31m-        [m
+     }[m
+     [m
+ private void habilitar()[m
+     {[m
+        [m
+[31m-       [m
+         txt_apellido_paterno_alumno.setEnabled(true);[m
+         txt_apellido_materno_alumno.setEnabled(true);[m
+         txt_nombre_alumno.setEnabled(true);[m
+         txt_ruta_imagen_alumno.setEnabled(true);[m
+         txt_edad_alumno.setEnabled(true);[m
+         cb_sexo_alumno.setEnabled(true);[m
+[31m-        [m
+[31m-        [m
+[31m-        [m
+         btn_nuevo.setEnabled(false);[m
+         btn_guardar.setEnabled(true);[m
+         btn_cancelar.setEnabled(true);[m
+[36m@@ -111,8 +101,6 @@[m [mprivate void habilitar()[m
+         btn_eliminar.setEnabled(false);[m
+         btn_seleccionar_ruta_imagen_alumno.setEnabled(true);[m
+         Ordenar_Tabla();[m
+[31m-         [m
+[31m-        [m
+         this.txt_apellido_paterno_alumno.requestFocus();[m
+     }[m
+ [m

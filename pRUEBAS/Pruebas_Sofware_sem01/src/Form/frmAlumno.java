@@ -2,9 +2,8 @@
 package Form;
 
 
-    import Class.Conexion;
+    
     import Class.Consultas;
-    import java.io.FileInputStream;
 
     import java.awt. Image;
     import java.awt.event.KeyEvent;
@@ -26,6 +25,8 @@ import javax.swing.JTextField;
 
 public final class frmAlumno extends javax.swing.JInternalFrame {
 
+    
+    Blob imagen_consulta;
     private void Ordenar_Tabla()
     {
         tbl_alumno.getColumnModel().getColumn(0).setPreferredWidth(150);
@@ -50,19 +51,16 @@ public final class frmAlumno extends javax.swing.JInternalFrame {
         cb_sexo_alumno.addItem("FEMENINO");
         lbl_image();
         inhabilitar();
-        Image imagen=getToolkit().getImage("src/imagenes/person_110935.png");
-        
-       
+        Ordenar_Tabla();   
         reinicio();
        
     }
     
-    private Connection conexion_base_de_datos_controlboletas;
     
     public void lbl_image()
     {
           Image imagen_default=getToolkit().getImage("src/imagenes/person_110935.png");
-            imagen_default=imagen_default.getScaledInstance(lbl_mostrar_imagen_alumno.getSize().width, lbl_mostrar_imagen_alumno.getSize().height,Image.SCALE_DEFAULT);
+            imagen_default=imagen_default.getScaledInstance(110,110,Image.SCALE_DEFAULT);
         lbl_mostrar_imagen_alumno.setIcon(new ImageIcon(imagen_default));
     }
     
@@ -87,13 +85,10 @@ private void inhabilitar()
     
        btn_seleccionar_ruta_imagen_alumno.setEnabled(false);
         Ordenar_Tabla();
-        
-        
     }
     
 private void habilitar()
     {
-       
        
         txt_apellido_paterno_alumno.setEnabled(true);
         txt_apellido_materno_alumno.setEnabled(true);
@@ -101,9 +96,6 @@ private void habilitar()
         txt_ruta_imagen_alumno.setEnabled(true);
         txt_edad_alumno.setEnabled(true);
         cb_sexo_alumno.setEnabled(true);
-        
-        
-        
         btn_nuevo.setEnabled(false);
         btn_guardar.setEnabled(true);
         btn_cancelar.setEnabled(true);
@@ -111,8 +103,6 @@ private void habilitar()
         btn_eliminar.setEnabled(false);
         btn_seleccionar_ruta_imagen_alumno.setEnabled(true);
         Ordenar_Tabla();
-         
-        
         this.txt_apellido_paterno_alumno.requestFocus();
     }
 
@@ -361,11 +351,6 @@ private void reinicio()
         tbl_alumno.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         tbl_alumno.setGridColor(new java.awt.Color(204, 255, 204));
         tbl_alumno.setSurrendersFocusOnKeystroke(true);
-        tbl_alumno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tbl_alumnoMouseClicked(evt);
-            }
-        });
         jScrollPane2.setViewportView(tbl_alumno);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 760, 250));
@@ -385,6 +370,7 @@ private String accion="";
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed
 inhabilitar();
 reinicio();
+  
     }//GEN-LAST:event_btn_cancelarActionPerformed
 
     private void btn_seleccionar_ruta_imagen_alumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_seleccionar_ruta_imagen_alumnoActionPerformed
@@ -421,6 +407,7 @@ reinicio();
     private void btn_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardarActionPerformed
         if("insertar".equals(accion))
         {
+            
             llenar_set_consultas();
             consultas.insertarAlumno(tbl_alumno);
             inhabilitar();
@@ -431,11 +418,23 @@ reinicio();
         //-----------------------------------------------------------------------------------------------
         if(("modifica").equals(accion))
                 {
+                    if(this.txt_ruta_imagen_alumno.getText().equals(""))
+                    {
+                        
+                        consultas.setFoto("");
+                    }
+                 int respuesta = JOptionPane.showConfirmDialog(null, "¿Modificara  "+txt_matricula_alumno.getText()+"? ¿Desea Continuar?", "Confirmación", JOptionPane.YES_NO_OPTION);
+                if(respuesta==JOptionPane.YES_OPTION){
                         llenar_set_consultas();
                         consultas.modificaAlumno();
                         inhabilitar();
                         reinicio();
                         consultas.VerAlumno_enTabla(tbl_alumno);
+                                }
+                else
+                {
+                    inhabilitar();
+                }
                 }//fin modificar
     }//GEN-LAST:event_btn_guardarActionPerformed
 
@@ -450,18 +449,6 @@ reinicio();
         consultas.setFoto(txt_ruta_imagen_alumno.getText());
     }
     
-    
-    
-    
-    
-    
-    
-    private void tbl_alumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_alumnoMouseClicked
-         
-         
-          
-    }//GEN-LAST:event_tbl_alumnoMouseClicked
-
     private void btn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarActionPerformed
         
         accion="modifica";
@@ -472,8 +459,6 @@ reinicio();
         }
         else{
         habilitar();
-        
-     
         }
     }//GEN-LAST:event_btn_modificarActionPerformed
 
@@ -602,7 +587,7 @@ if (cantidad_de_caracteres.length() >= 50 && c != '\b') {
           {
               
                   Image contenedor_image_en_label=null;
-                  Blob imagen_consulta=(Blob) datos[5];
+                   imagen_consulta=(Blob) datos[5];
                   contenedor_image_en_label=javax.imageio.ImageIO.read(imagen_consulta.getBinaryStream());
                   contenedor_image_en_label=contenedor_image_en_label.getScaledInstance(110,110,Image.SCALE_DEFAULT);
                   lbl_mostrar_imagen_alumno.setIcon(new ImageIcon(contenedor_image_en_label));
