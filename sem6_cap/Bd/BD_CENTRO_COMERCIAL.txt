@@ -1,0 +1,96 @@
+CREATE DATABASE CERNTRO_COMERCIAL;
+USE CERNTRO_COMERCIAL;
+
+CREATE TABLE CATEGORIA
+(
+	PK_ID_CATEGORIA  INT AUTO_INCREMENT PRIMARY KEY,
+    NOMBRE_CATEGORIA VARCHAR(50),
+    IMAGEN_CATEGORIA LONGBLOB  
+);
+
+CREATE TABLE PRODUCTOS
+(
+	PK_ID_PRODUCTO  INT AUTO_INCREMENT PRIMARY KEY,
+    NOMBRE_PRODUCTO VARCHAR(50),
+    FK_ID_CATEGORIA INT NOT NULL,
+    IMAGEN_PRODUCTO LONGBLOB,
+    FOREIGN KEY(FK_ID_CATEGORIA) REFERENCES CATEGORIA(PK_ID_CATEGORIA)
+);
+
+INSERT INTO CATEGORIA(PK_ID_CATEGORIA,NOMBRE_CATEGORIA) VALUES('1','ALIMENTO'),('2','BELLEZA'),('3','DEPORTES'),('4','ELECTRODOMESTICOS'),('5','HIGIENE Y SALUD'),('6','MAQUILLAJE'),('7','ROPA'),('8','TECNOLOGIA');
+INSERT INTO PRODUCTOS(PK_ID_PRODUCTO,NOMBRE_PRODUCTO,FK_ID_CATEGORIA) VALUES('1','CHOCOLOATE','1'),
+																			('2','GALLETA','1'),
+                                                                            ('3','PASTELES','1'),
+                                                                            ('4','CREMAS ANTIEDAD','2'),
+                                                                            ('5','ACIDO HIALURONICO','2'),
+                                                                            ('6','CREMA DE OJOS','2'),
+                                                                            ('7','LIMPIADOR FACIAL','2'),
+                                                                            ('8','ROPA DEPORTIVA','3'),
+                                                                            ('9','PESAS','3'),
+                                                                            ('10','LIGAS','3'),
+                                                                            ('11','PELOTAS','3'),
+                                                                            ('12','BALONES','3'),
+                                                                            ('13','LAVADORA','4'),
+                                                                            ('14','MICROONDAS','4'),
+                                                                            ('15','ASPIRADORA','4'),
+                                                                            ('16','MEDICAMENTOS','5'),
+                                                                            ('17','SUPLEMENTOS ALIMENTICIOS','5'),
+                                                                            ('18','VITAMINAS','5'),
+                                                                            ('19','SHAMPOO','5'),
+                                                                            ('20','LABIALES','6'),
+                                                                            ('21','BASE','6'),
+                                                                            ('22','RUBORES','6'),
+                                                                            ('23','DELINEADORES','6'),
+                                                                            ('24','VESTIDOS','7'),
+                                                                            ('25','TRAJES DE BAÃ‘O','7'),
+                                                                            ('26','TELEVISORES','8'),
+                                                                            ('27','REPRODUCTOR DE SONIDO','8'),
+                                                                            ('29','LAPTOPS','8'),
+                                                                            ('28','AUDIFONOS','8'),
+                                                                            ('30','COMPUTADORA','8');
+
+
+DELIMITER $$
+CREATE PROCEDURE SP_INSERTAR_CATEGORIA
+				 (
+					IN vin_nombre VARCHAR(50),
+                    IN vin_imagen LONGBLOB
+                 )
+BEGIN 
+INSERT INTO CATEGORIA(NOMBRE_CATEGORIA,IMAGEN_CATEGORIA) VALUES(vin_nombre,vin_imagen);
+END$$
+DELIMITER ;   
+
+DELIMITER $$
+CREATE PROCEDURE SP_ACTUALIZAR_CATEGORIA
+				 (
+					IN vin_codigo INT,
+					IN vin_nombre VARCHAR(50),
+                    IN vin_imagen LONGBLOB
+                 )
+BEGIN 
+UPDATE CATEGORIA
+   SET NOMBRE_CATEGORIA = vin_nombre,
+	   IMAGEN_CATEGORIA = vin_imagen
+ WHERE PK_ID_CATEGORIA  = vin_codigo;
+END$$
+DELIMITER ; 
+
+
+DELIMITER $$
+CREATE PROCEDURE SP_LISTAR_CATEGORIA()
+BEGIN
+SELECT * FROM CATEGORIA;
+END$$
+DELIMITER ;
+
+
+DELIMITER $$
+CREATE PROCEDURE SP_ELIMINAR_CATEGORIA(IN vin_id_categoria INT)
+BEGIN
+DELETE FROM CATEGORIA WHERE PK_ID_CATEGORIA=vin_id_categoria;
+END$$
+DELIMITER ;
+
+              
+
