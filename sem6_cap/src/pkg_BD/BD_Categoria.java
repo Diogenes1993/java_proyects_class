@@ -1,8 +1,11 @@
 
 package pkg_BD;
+import java.awt.List;
+import pkg_relacion.Utilidades_;
 import java.sql.Connection;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import pkg_entidades.Categoria;
 
@@ -99,6 +102,28 @@ public class BD_Categoria implements IGlobal<Categoria>{
         return modelo;
     }
 
+     public ArrayList<String>  llenar_Combo()
+     {
+         ArrayList<String> nombre_categoria=new ArrayList<>();
+           try
+        {
+        
+            CallableStatement preparando_SP=conexion.prepareCall("{ CALL SP_LISTAR_CATEGORIA()}");
+            ResultSet resultado_data=preparando_SP.executeQuery();
+            
+            while(resultado_data.next())
+            {
+                nombre_categoria.add(resultado_data.getString("NOMBRE_CATEGORIA"));
+            }
+            
+        }
+        catch(Exception ex)
+        {
+            Utilidades_.Mensaje(ex.toString() , 0);
+        }
+         
+         return nombre_categoria;
+     }
  
     
 }

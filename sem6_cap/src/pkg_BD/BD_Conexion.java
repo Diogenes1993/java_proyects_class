@@ -1,5 +1,6 @@
 
 package pkg_BD;
+import pkg_relacion.Utilidades_;
 import java.sql.Connection;
 import java.sql.DriverManager;
 

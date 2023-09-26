@@ -9,6 +9,7 @@ public class Sem6_cap {
         frm_Categoria categori=new frm_Categoria();
         categori.setVisible(true);
         
+        
     }
     
 }

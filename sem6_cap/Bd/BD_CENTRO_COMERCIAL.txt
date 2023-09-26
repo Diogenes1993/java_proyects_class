@@ -42,13 +42,13 @@ INSERT INTO PRODUCTOS(PK_ID_PRODUCTO,NOMBRE_PRODUCTO,FK_ID_CATEGORIA) VALUES('1'
                                                                             ('22','RUBORES','6'),
                                                                             ('23','DELINEADORES','6'),
                                                                             ('24','VESTIDOS','7'),
-                                                                            ('25','TRAJES DE BAÃ‘O','7'),
+                                                                            ('25','TRAJES DE BANO','7'),
                                                                             ('26','TELEVISORES','8'),
                                                                             ('27','REPRODUCTOR DE SONIDO','8'),
                                                                             ('29','LAPTOPS','8'),
                                                                             ('28','AUDIFONOS','8'),
                                                                             ('30','COMPUTADORA','8');
-
+-- PROCEDURES CATEGORIA
 
 DELIMITER $$
 CREATE PROCEDURE SP_INSERTAR_CATEGORIA
@@ -70,12 +70,13 @@ CREATE PROCEDURE SP_ACTUALIZAR_CATEGORIA
                  )
 BEGIN 
 UPDATE CATEGORIA
-   SET NOMBRE_CATEGORIA = vin_nombre,
-	   IMAGEN_CATEGORIA = vin_imagen
- WHERE PK_ID_CATEGORIA  = vin_codigo;
+   SET NOMBRE_CATEGORIA = IFNULL(vin_nombre,NOMBRE_CATEGORIA),
+	   IMAGEN_CATEGORIA = IFNULL(vin_imagen,IMAGEN_CATEGORIA)
+ WHERE PK_ID_CATEGORIA  = Vin_codigo;
 END$$
 DELIMITER ; 
 
+DROP PROCEDURE SP_ACTUALIZAR_CATEGORIA;
 
 DELIMITER $$
 CREATE PROCEDURE SP_LISTAR_CATEGORIA()
@@ -93,4 +94,77 @@ END$$
 DELIMITER ;
 
               
+-- PROCEDURE PRODUCTOS
+
+DELIMITER $$
+CREATE PROCEDURE SP_INSERTAR_PRODUCTO
+				 (
+					IN vin_nombre VARCHAR(50),
+                    IN vin_categoria INT,
+                    IN vin_imagen LONGBLOB
+                 )
+BEGIN 
+INSERT INTO PRODUCTOS(NOMBRE_PRODUCTO,FK_ID_CATEGORIA,IMAGEN_PRODUCTO) VALUES(vin_nombre,vin_categoria,vin_imagen);
+END$$
+DELIMITER ;   
+
+
+
+
+
+
+
+DELIMITER $$
+CREATE PROCEDURE SP_ACTUALIZAR_PRODUCTO
+				 (
+					IN vin_codigo INT,
+					IN vin_nombre VARCHAR(50),
+                    IN vin_categoria INT,
+                    IN vin_imagen LONGBLOB
+                 )
+BEGIN 
+UPDATE PRODUCTOS
+   SET NOMBRE_PRODUCTO = IFNULL(vin_nombre,NOMBRE_PRODUCTO),
+		FK_ID_CATEGORIA=IFNULL(vin_categoria,FK_ID_CATEGORIA),
+	   IMAGEN_PRODUCTO = IFNULL(vin_imagen,IMAGEN_PRODUCTO)
+ WHERE PK_ID_PRODUCTO  = vin_codigo;
+END$$
+DELIMITER ; 
+
+
+DELIMITER $$
+CREATE PROCEDURE SP_LISTAR_PRODUCTO()
+BEGIN
+SELECT * FROM PRODUCTOS;
+END$$
+DELIMITER ;
+
+CALL SP_LISTAR_PRODUCTO;
+
+DELIMITER $$
+CREATE PROCEDURE SP_ELIMINAR_PRODUCTO(IN vin_id_producto INT)
+BEGIN
+DELETE FROM PRODUCTOS WHERE PK_ID_PRODUCTO=vin_id_categoria;
+END$$
+DELIMITER ;
+
+              
+-- PRCEDURE LISTAR
+CREATE VIEW VW_IJ_CATE_PRO
+AS
+SELECT PK_ID_PRODUCTO,NOMBRE_PRODUCTO,IMAGEN_PRODUCTO,NOMBRE_CATEGORIA,IMAGEN_CATEGORIA FROM
+PRODUCTOS AS P INNER JOIN CATEGORIA C ON P.FK_ID_CATEGORIA=C.PK_ID_CATEGORIA;
+
+DELIMITER $$
+CREATE PROCEDURE SP_FILTRAR_X_CATEGORI(IN inv_nombre_categoria VARCHAR(50))
+BEGIN
+SELECT * FROM VW_IJ_CATE_PRO WHERE NOMBRE_CATEGORIA=inv_nombre_categoria;
+END$$
+DELIMITER ;
+
+
+
+
+
+
 
